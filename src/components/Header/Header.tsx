@@ -72,10 +72,10 @@ export default function Header() {
                   <button
                     className="text-rawumber"
                     onClick={() => {
-                      signIn("discord").catch(console.log);
+                      signIn("google").catch(console.log);
                     }}
                   >
-                    Login with Discord
+                    Login
                   </button>
                 )}
               </div>
@@ -85,12 +85,12 @@ export default function Header() {
 
         <ul className="DESKTOP-MENU hidden space-x-8 lg:flex">
           <li>
-            <a href="/about">About</a>
+            <a href="/">About</a>
           </li>
           <div>
             {session ? (
               <>
-                <p className="text-gray-700">hi {session.user?.name}</p>
+                <p className="text-gray-700">Hi {session.user?.name}</p>
                 <button
                   className="text-rawumber"
                   onClick={() => {
@@ -103,10 +103,10 @@ export default function Header() {
             ) : (
               <button
                 onClick={() => {
-                  signIn("discord").catch(console.log);
+                  signIn("").catch(console.log);
                 }}
               >
-                Login with Discord
+                Login
               </button>
             )}
           </div>

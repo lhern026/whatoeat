@@ -9,7 +9,7 @@ export default function Hero() {
           Dont know what to eat?
         </h1>
 
-        <button className=" hover:bg-blue-500 text-blue-700 hover:text-white border-blue-500 rounded  border bg-transparent py-2 px-4 text-center font-semibold hover:border-transparent">
+        <button className="bg-neutral-800 hover:bg-neutral-700 mx-auto block rounded-md py-3 px-6 text-center">
           Generate meal
         </button>
       </div>

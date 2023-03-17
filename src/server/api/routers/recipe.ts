@@ -1,8 +1,23 @@
 import { z } from "zod";
-import { createTRPCRouter, publicProcedure } from "../trpc";
+import { createTRPCRouter, protectedProcedure,publicProcedure } from "../trpc";
 
 export const recipeRouter = createTRPCRouter({
-  postMessage: publicProcedure
+  getAll: publicProcedure.query(async ({ ctx }) => {
+    try {
+      return await ctx.prisma.recipe.findMany({
+        select: {
+          name: true,
+          ingredients: true,
+        },
+        orderBy: {
+          createdAt: "desc",
+        },
+      });
+    } catch (error) {
+      console.log("error", error);
+    }
+  }),
+  postMessage: protectedProcedure
     .input(
       z.object({
         name: z.string(),

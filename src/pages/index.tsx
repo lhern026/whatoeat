@@ -5,20 +5,23 @@ import { signIn, signOut, useSession } from "next-auth/react";
 import { useState } from "react"; // import state
 import Header from "../components/Header/Header";
 import Hero from "../components/Hero/Hero";
+import RecipeEntries from "../components/Recipes/RecipeEntries";
 import { api } from "../utils/api";
 
 const Home = () => {
   const [isNavOpen, setIsNavOpen] = useState(false); // initiate isNavOpen state with false
   const { data: session, status } = useSession();
+  const hello = api;
 
   if (status === "loading") {
-    return <main>Loading...</main>;
+    return <main className="flex flex-col items-center pt-4 ">Loading...</main>;
   }
 
   return (
     <div className="container mx-auto mb-8 px-8">
       <Header />
       <Hero />
+      <RecipeEntries />
     </div>
   );
 };

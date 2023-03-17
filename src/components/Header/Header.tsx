@@ -72,7 +72,7 @@ export default function Header() {
                   <button
                     className="text-rawumber"
                     onClick={() => {
-                      signIn("google").catch(console.log);
+                      signIn("").catch(console.log);
                     }}
                   >
                     Login

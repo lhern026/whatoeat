@@ -8,7 +8,7 @@ const RecipeEntries = () => {
   if (isLoading) return <div>Fetching recipes...</div>;
   return (
     <div className="relative overflow-x-auto">
-      {RecipeEntries?.map((entry: string, index: number) => {
+      {RecipeEntries?.map((entry, index) => {
         return (
           <table
             className="text-gray-500 dark:text-gray-400 w-full text-left text-sm"

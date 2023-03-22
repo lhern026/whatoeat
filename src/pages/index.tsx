@@ -11,7 +11,6 @@ import { api } from "../utils/api";
 const Home = () => {
   const [isNavOpen, setIsNavOpen] = useState(false); // initiate isNavOpen state with false
   const { data: session, status } = useSession();
-  const hello = api;
 
   if (status === "loading") {
     return <main className="flex flex-col items-center pt-4 ">Loading...</main>;

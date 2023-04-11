@@ -22,6 +22,9 @@ const RecipeEntries = () => {
                 <th scope="col" className="px-6 py-3">
                   Ingredients
                 </th>
+                <th scope="col" className="px-6 py-3">
+                  User
+                </th>
               </tr>
             </thead>
             <tbody>

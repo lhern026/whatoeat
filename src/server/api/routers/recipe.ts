@@ -8,6 +8,8 @@ export const recipeRouter = createTRPCRouter({
         select: {
           name: true,
           ingredients: true,
+          
+      
         },
         orderBy: {
           createdAt: "desc",
@@ -17,7 +19,7 @@ export const recipeRouter = createTRPCRouter({
       console.log("error", error);
     }
   }),
-  postMessage: protectedProcedure
+  postMessage: publicProcedure
     .input(
       z.object({
         name: z.string(),
